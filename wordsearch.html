@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Search</title>
+    <link rel="stylesheet" href="wordsearch.css">
+    <script src="wordsearch.js" defer></script>
+</head>
+<body>
+      <div class="container" id="container">
+        <a href="homepage.html" class="backBtn">
+            <span>←</span>
+            <span>Main Menu</span>
+        </a>
+        <div class="set" id="set">
+            <h1>Word Search</h1>
+            <p>Choose your level and word category!</p>
+  
+        <label for="levelSelect">Choose Level</label>
+        <select id="levelSelect">
+            <option value="1">Level 1 - Easy</option>
+            <option value="2">Level 2 - Medium</option>
+            <option value="3">Level 3 - Hard</option>
+        </select>
+        <label for="">Choose Category</label>
+        <div class="categoryContainer">
+            <div class="card selected" data-category="Nature" >
+                <img src="Images/nature.jpg" alt="">
+                <span>Nature</span>
+            </div>
+            <div class="card" data-category="Space">
+                <img src="Images/space.jpg" alt="">
+                <span>Space</span>
+            </div>
+            <div class="card" data-category="Ocean">
+                <img src="Images/ocean.jpg" alt="">
+                <span>Ocean</span>
+            </div>
+            <div class="card" data-category="Sports">
+                <img src="Images/sports.jpg" alt="">
+                <span>Sports</span>
+            </div>
+            <div class="card" data-category="Food">
+                <img src="Images/food.jpg" alt="">
+                <span>Food</span>
+            </div>
+            <div class="card" data-category="Technology">
+                <img src="Images/tech.jpg" alt="">
+                <span>Technology</span>
+            </div>
+            <div class="card" data-category="Fantasy">
+                <img src="Images/fantasy.jpg" alt="">
+                <span>Fantasy</span>
+            </div>
+            <div class="card" data-category="Animals">
+                <img src="Images/animals.jpg" alt="Animals">
+                <span>Animals</span>
+            </div>
+        </div>
+        <button id="startBtn" class="btn">Start Game</button>
+    </div>
+</div>
+<div class="game">
+    <a href="homepage.html" class="backBtn">
+      <span>←</span>
+      <span>Main Menu</span>
+    </a>
+    <header class="gameHeading">
+        <h1>Word Search</h1>
+        <p id="levelInfo">Level 1 - Easy</p>
+        <button id="close" class="close">x</button>
+    </header>
+    <div class="gamecard">
+        <div class="info">
+            <span>Category</span>
+            <strong id="categoryInfo">Nature</strong>
+        </div>
+        <div class="info">
+            <span>Time Left</span>
+            <strong id="timer">02:00</strong>
+        </div>
+    </div>
+    <main class="create">
+    <div class="grid" id="grid"></div>
+    <div class="wordsbox">
+        <h2>Find These Words</h2>
+        <div class="words" id="words"></div>
+    </div>
+    </main>
+    <button id="restart" class="btn restart">Restart game</button>
+
+<div class="popup-container hidden" id="popupContainer">
+    <div class="popup">
+        <h2 id="popupTitle">Congratulations!</h2>
+        <p id="popupMessage">You found all the words!</p>
+        <div class="popup-buttons">
+            <button id="playAgainBtn" class="btn">Play Again</button>
+            <button id="popupCloseBtn" class="btn">Close</button>
+        </div>
+    </div>
+</div>
+
+</div>
+</body>
+</html>

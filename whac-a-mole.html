@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="whac-a-mole.css">
+  <script src="whac-a-mole.js" defer></script>
+  <title>Whac-a-Mole</title>
+</head>
+<body>
+    <div class="container">
+    <a href="homepage.html" class="backBtn">
+        <span>←</span>
+        <span>Main Menu</span>
+    </a>
+      <div class="title">
+        <h1>Whac-a-Mole</h1>
+      </div>
+      <div id="game-popup" class="popup">
+        <div class="popup-content">
+          <div class="text">
+            <h2>🎉 Game Over!</h2>
+            <p>Your Score: <span id="final-score">0</span></p>
+            <button id="play-again">Play Again</button>
+            <button id="close">Close</button>
+          </div>
+        </div>
+      </div>
+      <div class="flex-container center">
+        <h2>Your score: <span id="score">0</span></h2>
+        <h2>Time left: <span id="time-left">30</span></h2>
+        <h2>High Score: <span id="high-score">0</span></h2>
+      </div>
+
+    <div class="booster-box hidden">
+        <h3>⚡ Power Booster</h3>
+        <p id="booster-status">Reach 10 points to unlock!</p>
+        <button id="booster-btn" disabled>Activate 2× Score</button>
+    </div>
+      <div class="flex-container center">
+        <div class="grid"></div>
+      </div>
+      <div class="flex-container center button-start">
+        <button class="back-button" id="start-button" >Start game</button>
+        <button class="back-button" id="stop-button">Stop</button>
+      </div>
+    </div>
+</body>
+</html>

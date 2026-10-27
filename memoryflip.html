@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Flip</title>
+    <link rel="stylesheet" href="memoryflip.css">
+    <script src="memoryflip.js" defer></script>
+</head>
+<body>
+    
+     <main class="page">
+        <a href="homepage.html" class="backBtn">
+            <span>←</span>
+            <span>Main Menu</span>
+        </a>
+        <section class="set" id="set">
+            <h1>Memory Flip</h1>
+            <p class="subtitle">Choose your level and card theme!</p>
+
+            <label for="level">Choose Level</label>
+            <select id="level">
+                <option value="easy">Level 1 - Easy</option>
+                <option value="medium">Level 2 - Medium</option>
+                <option value="hard">Level 3 - Hard</option>
+            </select>
+
+            <h2>Choose Card Theme</h2>
+
+            <div class="categories">
+                <button class="category selected" data-category="Fruits">
+                    <img src="Images/fruits.png" alt="">
+                    <span>Fruits</span>
+                </button>
+
+                <button class="category" data-category="Animals">
+                <img src="Images/animals.jpg" alt="">
+                    <span>Animals</span>
+                </button>
+
+                <button class="category" data-category="Flowers">
+                    <img src="Images/flower.jpg" alt="">
+                    <span>Flowers</span>
+                </button>
+
+                <button class="category" data-category="Sports">
+                    <img src="Images/sports.jpg" alt="">
+                    <span>Sports</span>
+                </button>
+
+                <button class="category" data-category="Ocean">
+                    <img src="Images/ocean.jpg" alt="">
+                    <span>Ocean</span>
+                </button>
+
+                <button class="category" data-category="Space">
+                    <img src="Images/space.jpg" alt="">
+                    <span>Space</span>
+                </button>
+
+                <button class="category" data-category="Food">
+                    <img src="Images/food.png" alt="">
+                    <span>Food</span>
+                </button>
+
+                <button class="category" data-category="Hearts">
+                    <img src="Images/hearts.png" alt="">
+                    <span>Hearts</span>
+                </button>
+            </div>
+
+            <button class="start-button" id="startGame">Start Game</button>
+        </section>
+
+        <section class="game-panel" id="gamePanel" hidden>
+            <a href="homepage.html" class="backBtn">
+                <span>←</span>
+                <span>Main Menu</span>
+            </a>
+            <header class="game-header">
+                <button class="back-button" id="backButton">← Back</button>
+                <h1>Memory Flip</h1>
+                <button class="restart-button" id="restartBtn"> Restart</button>
+            </header>
+
+            <div class="stats">
+                <div class="stat">
+                    <span>Time</span>
+                    <strong id="timer">00:00</strong>
+                </div>
+
+                <div class="stat">
+                    <span>Moves</span>
+                    <strong id="moves">0</strong>
+                </div>
+
+                <div class="stat">
+                    <span>Best Score</span>
+                    <strong id="bestScore">--</strong>
+                </div>
+            </div>
+            <div id="gameBoard" class="game-board"></div>
+        </section>
+        <section id="winMessage" class="win-message">
+            <div class="win-card">
+                <button id="close" aria-label="Close">&times;</button>
+
+                <h2>✨ You did it!</h2>
+
+                <p>Time: <strong id="finalTime">00:00</strong></p>
+                <p>Moves: <strong id="finalMoves">0</strong></p>
+
+                <p id="newRecord"></p>
+
+                <button id="playAgain" class="start-button">
+                    Play Again
+                </button>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>
